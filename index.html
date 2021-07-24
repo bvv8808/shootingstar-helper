@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./helper.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/bvv8808/shootingstar-html@latest/shootingstar.js"></script>
+    <title>ShootingStar Helper</title>
+  </head>
+  <body>
+    <header>
+      <span>Shooting Star - Helper</span>
+    </header>
+    <main>
+      <div class="displaySide">
+        <div id="displayWrapper">
+            <div class="display"></div>
+            <div class='displayClickZone'>
+                <input class='palette' id='iPaletteColor' type='color' style="width: 0px; height: 0px; padding: 0; border:none" />
+            </div>
+            
+        </div>
+        <div class="code">
+          <pre><code class='language-javascript'></code></pre>
+        </div>
+      </div>
+      
+      <div class='optionSide'>
+        <div style="border-bottom: 2px solid #aeaeae">
+            <h5 style="margin: 0 0 10px 0">Option Control</h5>
+        </div>
+        <div class="optionController">
+          <div class="optionSection">
+            <label for="switchBackground">Hide background stars</label>
+            <input type="checkbox" id="switchBackground" />
+          </div>
+        
+            <div class="optionSection">
+                <div>Shooting Star Effect</div>
+                <button class="btnPlay" onclick="onClickPlayBtn(this)">
+                Playing
+                </button>
+            </div>
+            <div class="optionSection">
+                <div>Color or stars</div>
+                <input type="color" id="iColor" value="#ccccff" />
+                <span class="labelColor">#ccccff</span>
+            </div>
+            <div class="optionSection">
+                <div>How tall a shooting star is</div>
+                <input
+                    type="range"
+                    id="iRangeStarLength"
+                    value="80"
+                    min="0"
+                    max="200"
+                />
+                <span class="labelStarLength">80px</span>
+            </div>
+            <div class="optionSection">
+                <div>How far stars will fall down</div>
+                <input
+                    type="range"
+                    id="iRangeDistance"
+                    value="120"
+                    min="0"
+                    max="300"
+                />
+                <span class="labelDistance">120px</span>
+            </div>
+            <div class="optionSection">
+                <div>Time that a star falls down entirely</div>
+                <input
+                    type="range"
+                    id="iRangeDuration"
+                    value="600"
+                    min="50"
+                    max="2000"
+                />
+                <span class="labelDuration">600ms</span>
+            </div>
+            <div class="optionSection">
+                <div>Maximum term that stars appear</div>
+                <input
+                    type="range"
+                    id="iRangeFrequency"
+                    value="1500"
+                    min="10"
+                    max="5000"
+                />
+                <span class="labelFrequency">1500ms</span>
+            </div>
+            <div class="optionSection">
+                <div>Minimum term that stars appear</div>
+                <input
+                    type="range"
+                    id="iRangeMinFrequency"
+                    value="500"
+                    min="10"
+                    max="5000"
+                />
+                <span class="labelMinFrequency">500ms</span>
+            </div>
+        
+            <div class="optionSection">
+                <div>How many stars are on the background</div>
+                <input
+                    type="range"
+                    id="iRangeBackgroundStars"
+                    value="20"
+                    min="0"
+                    max="500"
+                />
+                <span class="labelBackgroundStars">20EA</span>
+            </div>
+
+            <i>* If you want to change the background color of displaying emelent,
+            just click the displaying element. </i>
+            </div>
+        </div>
+
+      
+
+      </div>
+    </main>
+
+    <script src="./helper.js"></script>
+  </body>
+</html>
